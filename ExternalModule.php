@@ -43,14 +43,13 @@ class ExternalModule extends AbstractExternalModule {
 
         if (empty($results)) return;
 
-        // TODO: use Sets, cast as array before getData call
+        // TODO: upgrade to Sets if/when available
         $records = [];
         $events = [];
         foreach($results as $result) {
             array_push($records, $result['record']);
             array_push($events, $result['event_id']);
         }
-
 
         $alerts_field = $this->getProjectSetting('alerts_comment_field', $project_id);
         $get_data = [

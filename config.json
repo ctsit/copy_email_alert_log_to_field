@@ -1,5 +1,5 @@
 {
-    "name": "Copy Email Alert to Field",
+    "name": "Copy Email Alert Log to Field",
     "namespace": "CopyEmailAlert\\ExternalModule",
     "description": "Copies email alert sent times into a field",
     "permissions": [
@@ -28,7 +28,7 @@
     "project-settings": [
         {
             "key": "alerts_comment_field",
-            "name": "Which instrument is used for appointments?",
+            "name": "Field to pipe alert log",
             "autocomplete": true,
             "type": "field-list",
             "required": true
@@ -40,7 +40,7 @@
         },
         {
             "key": "search_all_alerts",
-            "name": "Search all alerts on next run?",
+            "name": "Search all alerts on next run",
             "type": "checkbox"
         }
     ],
