@@ -25,61 +25,60 @@ class ExternalModule extends AbstractExternalModule {
     }
 
     function addEmailAlertsToProjectComments($project_id) {
-        // hack in frequency via round(now()) modulo freq
+        // TODO: hack in configurable frequency via round(now()) modulo freq and a return
+        $alert_search_period = ($this->framework->getProjectSetting('alert_search_period', $project_id)) ?: 1;
         $sql = "SELECT record, event_id, alert_title, last_sent FROM (
                 (SELECT * FROM `redcap_alerts`
                     WHERE
                     project_id = $project_id
-                 ) as ra
+                    ";
+        $sql .= ($this->framework->getProjectSetting('search_all_alerts', $project_id)) ?
+            $this->setProjectSetting('search_all_alerts', null, $project_id) : // turn off full search (returns null)
+            "AND email_timestamp_sent >= NOW() - INTERVAL " . $alert_search_period . " HOUR";
+        $sql .= ") as ra
                 INNER JOIN redcap_alerts_sent AS ras ON ras.alert_id = ra.alert_id
             );";
-            // grab only now() - <cron_interval> alerts
-            // wouldn't catch before module turn-on, make manual switch
-            // initial config: look into past, change projectSetting turn itself back off
         $result = $this->framework->query($sql);
         $results = $result->fetch_all(MYSQLI_ASSOC);
 
         if (empty($results)) return;
 
+        // TODO: use Sets, cast as array before getData call
         $records = [];
         $events = [];
         foreach($results as $result) {
             array_push($records, $result['record']);
             array_push($events, $result['event_id']);
-            array_push($alert_titles, $result['alert_title']);
         }
 
 
+        $alerts_field = $this->getProjectSetting('alerts_comment_field', $project_id);
         $get_data = [
             'project_id' => $project_id,
             'records' => array_values($records),
             'events' => array_values($events),
-            'fields' => ['result_comments'] // $this->framework->getProjectSetting('comment_field');
+            'fields' => [$alerts_field]
             ];
 
         $redcap_data = \REDCap::getData($get_data);
 
-
         foreach ($results as $result) {
-            //if $result['last_sent'] in result_comments; continue
-            $alert_comment = $result['alert_title'] . " alert email sent: ";
             $record = $result['record'];
             $event_id = $result['event_id'];
-            $alert_comment .= $result['last_sent'];
-            $current_comment = $redcap_data[$record][$event_id]['result_comments']; // configurable at the project level
+
+            $current_comment = $redcap_data[$record][$event_id][$alerts_field];
+            $alert_comment = $result['alert_title'] . " alert email sent: " . $result['last_sent'];;
+            if (strpos($current_comment, $alert_comment) !== FALSE) continue; // https://www.php.net/manual/en/function.strpos.php
+
             if (empty($current_comment)) {
                 $redcap_data[$record][$event_id] = [
-                    'result_comments' => $alert_comment
-                ];
-            } else if (strpos($current_comment, $alert_comment) === FALSE) { // https://www.php.net/manual/en/function.strpos.php
-                // if there are already comments and they aren't this alert, append the alert
-                $redcap_data[$record][$event_id] = [
-                    'result_comments' => $current_comment . '\n' . $alert_comment
+                    $alerts_field => $alert_comment
                 ];
             } else {
-                // prevent from re-writing to the field again
-                // revisit
-                //unset($redcap_data[$record][$event_id]);
+                // there are already comments and they aren't this alert, append the alert
+                $redcap_data[$record][$event_id] = [
+                    $alerts_field => $current_comment . "\n" . $alert_comment
+                ];
             }
         }
 

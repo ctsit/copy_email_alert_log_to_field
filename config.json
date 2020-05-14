@@ -27,32 +27,21 @@
     },
     "project-settings": [
         {
-            "key": "location_id",
-            "name": "Which location ID is this project for? (0-15)",
-            "type": "text",
-            "required": true
-        },
-        {
-            "key": "appointment_form",
+            "key": "alerts_comment_field",
             "name": "Which instrument is used for appointments?",
-            "type": "form-list",
+            "autocomplete": true,
+            "type": "field-list",
             "required": true
         },
         {
-            "key": "repeat_implement",
-            "name": "Which repeat type is used for appointments?",
-            "type": "radio",
-            "choices": [
-                {
-                    "name": "Repeat instances",
-                    "value": "instances"
-                },
-                {
-                    "name": "Individual events",
-                    "value": "individual_events"
-                }
-            ],
-            "required": true
+            "key": "alert_search_period",
+            "name": "Hours back to search for alerts",
+            "type": "text"
+        },
+        {
+            "key": "search_all_alerts",
+            "name": "Search all alerts on next run?",
+            "type": "checkbox"
         }
     ],
     "links": {
