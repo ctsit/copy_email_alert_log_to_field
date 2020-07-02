@@ -26,7 +26,6 @@ class ExternalModule extends AbstractExternalModule {
 
     function addEmailAlertsToProjectComments($project_id) {
         // TODO: hack in configurable frequency via round(now()) modulo freq and a return
-        $alert_search_period = ($this->framework->getProjectSetting('alert_search_period', $project_id)) ?: 1;
         $sql = "SELECT record, event_id, alert_title, last_sent FROM (
                 (SELECT * FROM `redcap_alerts`
                     WHERE
@@ -34,7 +33,7 @@ class ExternalModule extends AbstractExternalModule {
                     ";
         $sql .= ($this->framework->getProjectSetting('search_all_alerts', $project_id)) ?
             $this->setProjectSetting('search_all_alerts', null, $project_id) : // turn off full search (returns null)
-            "AND email_timestamp_sent >= NOW() - INTERVAL " . $alert_search_period . " HOUR";
+            "AND email_timestamp_sent >= NOW() - INTERVAL 8 MINUTE"; // this cron runs every minute with a max of runtime of 6 minutes
         $sql .= ") as ra
                 INNER JOIN redcap_alerts_sent AS ras ON ras.alert_id = ra.alert_id
             );";

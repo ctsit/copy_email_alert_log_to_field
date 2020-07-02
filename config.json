@@ -34,11 +34,6 @@
             "required": true
         },
         {
-            "key": "alert_search_period",
-            "name": "Hours back to search for alerts",
-            "type": "text"
-        },
-        {
             "key": "search_all_alerts",
             "name": "Search all alerts on next run",
             "type": "checkbox"
