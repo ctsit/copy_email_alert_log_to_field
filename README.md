@@ -1,5 +1,5 @@
 # Copy Email Alert Log to Field
-A REDCap module to copy email alert log entries into a user-defined REDCap text field. All alerts for tied to an event will appear in the corresponding field on that event.
+A REDCap module to copy email alert log entries into a user-defined REDCap text field. All alerts tied to an event will appear in the corresponding field on that event.
 
 ![](img/comment_field.png)
 
