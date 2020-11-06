@@ -13,5 +13,5 @@ A REDCap module to copy email alert log entries into a user-defined REDCap text 
 
 ## Configuration
 
-- **Field to pipe alert log**: Select a field to pipe email alert logs in to. The chosen field **must exist** in every **event** you have an alert set for to capture alerts for that event.
-- **Search all alerts on next run**: Check this box to search the log of all alerts on the next run. Recommended to turn on only if enabling on a project which has already sent email alerts out. This turns itself off after running.
+- **Field to pipe alert log**: Select a field to write email alert logs into. The chosen field **must exist** in each REDCap event where you would like to capture alerts.
+- **Search all alerts on next run**: Check this box to search the log of all alerts on the next run for alert history to copy into the field. This switch is recommended only if you are enabling this module on a project which has already sent email alerts out. As it should only be needed once, this switch turns itself off after running once. 
