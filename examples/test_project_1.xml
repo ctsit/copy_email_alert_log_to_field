@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<ODM xmlns="http://www.cdisc.org/ns/odm/v1.3" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:redcap="https://projectredcap.org" xsi:schemaLocation="http://www.cdisc.org/ns/odm/v1.3 schema/odm/ODM1-3-1.xsd" ODMVersion="1.3.1" FileOID="000-00-0000" FileType="Snapshot" Description="copy_email_alert_log_to_field test 1" AsOfDateTime="2020-11-06T16:00:31" CreationDateTime="2020-11-06T16:00:31" SourceSystem="REDCap" SourceSystemVersion="10.3.5">
+<Study OID="Project.CopyemailalertlogtofieldTest1">
+<GlobalVariables>
+	<StudyName>copy_email_alert_log_to_field test 1</StudyName>
+	<StudyDescription>This file contains the metadata, events, and data for REDCap project "copy_email_alert_log_to_field test 1".</StudyDescription>
+	<ProtocolName>copy_email_alert_log_to_field test 1</ProtocolName>
+	<redcap:RecordAutonumberingEnabled>1</redcap:RecordAutonumberingEnabled>
+	<redcap:CustomRecordLabel></redcap:CustomRecordLabel>
+	<redcap:SecondaryUniqueField></redcap:SecondaryUniqueField>
+	<redcap:SchedulingEnabled>0</redcap:SchedulingEnabled>
+	<redcap:SurveysEnabled>0</redcap:SurveysEnabled>
+	<redcap:SurveyInvitationEmailField></redcap:SurveyInvitationEmailField>
+	<redcap:Purpose>0</redcap:Purpose>
+	<redcap:PurposeOther></redcap:PurposeOther>
+	<redcap:ProjectNotes></redcap:ProjectNotes>
+	<redcap:MissingDataCodes></redcap:MissingDataCodes>
+	<redcap:AlertsGroup>
+		<redcap:Alerts alert_title="Alert 1" alert_type="EMAIL" alert_stop_type="RECORD_EVENT" email_deleted="0" alert_expiration="" form_name="my_first_instrument" form_name_event="" alert_condition="" ensure_logic_still_true="0" prevent_piping_identifiers="1" email_incomplete="1" email_from="you@example.org" email_from_display="" email_to="you@example.org" phone_number_to="" email_cc="" email_bcc="" email_subject="Subject of Alert 1" alert_message="&lt;p&gt;Body of Alert 1&lt;/p&gt;" email_failed="" email_attachment_variable="" email_attachment1="" email_attachment2="" email_attachment3="" email_attachment4="" email_attachment5="" email_repetitive="0" email_repetitive_change="0" email_repetitive_change_calcs="0" cron_send_email_on="now" cron_send_email_on_date="" cron_send_email_on_time_lag_days="" cron_send_email_on_time_lag_hours="" cron_send_email_on_time_lag_minutes="" cron_send_email_on_field="" cron_send_email_on_field_after="after" cron_send_email_on_next_day_type="DAY" cron_send_email_on_next_time="" cron_repeat_for="0" cron_repeat_for_units="DAYS" cron_repeat_for_max="" email_timestamp_sent="2020-11-06 15:50:41" email_sent="1" alert_number="1"/>
+		<redcap:Alerts alert_title="Alert 2" alert_type="EMAIL" alert_stop_type="RECORD_EVENT" email_deleted="0" alert_expiration="" form_name="my_first_instrument" form_name_event="" alert_condition="[send_alert_2] = &#039;1&#039;" ensure_logic_still_true="0" prevent_piping_identifiers="1" email_incomplete="1" email_from="you@example.org" email_from_display="" email_to="you@example.org" phone_number_to="" email_cc="" email_bcc="" email_subject="Subject of Alert 2" alert_message="&lt;p&gt;Body of Alert 2&lt;/p&gt;" email_failed="" email_attachment_variable="" email_attachment1="" email_attachment2="" email_attachment3="" email_attachment4="" email_attachment5="" email_repetitive="0" email_repetitive_change="0" email_repetitive_change_calcs="0" cron_send_email_on="now" cron_send_email_on_date="" cron_send_email_on_time_lag_days="" cron_send_email_on_time_lag_hours="" cron_send_email_on_time_lag_minutes="" cron_send_email_on_field="" cron_send_email_on_field_after="after" cron_send_email_on_next_day_type="DAY" cron_send_email_on_next_time="" cron_repeat_for="0" cron_repeat_for_units="DAYS" cron_repeat_for_max="" email_timestamp_sent="2020-11-06 15:48:46" email_sent="1" alert_number="2"/>
+		<redcap:Alerts alert_title="Alert 3" alert_type="EMAIL" alert_stop_type="RECORD_EVENT" email_deleted="0" alert_expiration="" form_name="my_first_instrument" form_name_event="" alert_condition="[send_alert_3] = &#039;1&#039;" ensure_logic_still_true="0" prevent_piping_identifiers="1" email_incomplete="1" email_from="you@example.org" email_from_display="" email_to="you@example.org" phone_number_to="" email_cc="" email_bcc="" email_subject="Subject of Alert 3" alert_message="&lt;p&gt;Body of Alert 3&lt;/p&gt;" email_failed="" email_attachment_variable="" email_attachment1="" email_attachment2="" email_attachment3="" email_attachment4="" email_attachment5="" email_repetitive="0" email_repetitive_change="0" email_repetitive_change_calcs="0" cron_send_email_on="now" cron_send_email_on_date="" cron_send_email_on_time_lag_days="" cron_send_email_on_time_lag_hours="" cron_send_email_on_time_lag_minutes="" cron_send_email_on_field="" cron_send_email_on_field_after="after" cron_send_email_on_next_day_type="DAY" cron_send_email_on_next_time="" cron_repeat_for="0" cron_repeat_for_units="DAYS" cron_repeat_for_max="" email_timestamp_sent="" email_sent="0" alert_number="3"/>
+		<redcap:Alerts alert_title="Alert 4" alert_type="EMAIL" alert_stop_type="RECORD_EVENT" email_deleted="0" alert_expiration="" form_name="my_first_instrument" form_name_event="" alert_condition="[send_alert_4] = &#039;1&#039;" ensure_logic_still_true="0" prevent_piping_identifiers="1" email_incomplete="1" email_from="you@example.org" email_from_display="" email_to="you@example.org" phone_number_to="" email_cc="" email_bcc="" email_subject="Subject of Alert 4" alert_message="&lt;p&gt;Body of Alert 4&lt;/p&gt;" email_failed="" email_attachment_variable="" email_attachment1="" email_attachment2="" email_attachment3="" email_attachment4="" email_attachment5="" email_repetitive="0" email_repetitive_change="0" email_repetitive_change_calcs="0" cron_send_email_on="now" cron_send_email_on_date="" cron_send_email_on_time_lag_days="" cron_send_email_on_time_lag_hours="" cron_send_email_on_time_lag_minutes="" cron_send_email_on_field="" cron_send_email_on_field_after="after" cron_send_email_on_next_day_type="DAY" cron_send_email_on_next_time="" cron_repeat_for="0" cron_repeat_for_units="DAYS" cron_repeat_for_max="" email_timestamp_sent="2020-11-06 15:49:28" email_sent="1" alert_number="4"/>
+	</redcap:AlertsGroup>
+</GlobalVariables>
+<MetaDataVersion OID="Metadata.CopyemailalertlogtofieldTest1_2020-11-06_1600" Name="copy_email_alert_log_to_field test 1" redcap:RecordIdField="record_id">
+	<Protocol>
+		<StudyEventRef StudyEventOID="Event.event_1_arm_1" OrderNumber="1" Mandatory="No"/>
+		<StudyEventRef StudyEventOID="Event.event_2_arm_1" OrderNumber="2" Mandatory="No"/>
+		<StudyEventRef StudyEventOID="Event.event_3_arm_1" OrderNumber="3" Mandatory="No"/>
+		<StudyEventRef StudyEventOID="Event.event_4_arm_1" OrderNumber="4" Mandatory="No"/>
+		<StudyEventRef StudyEventOID="Event.event_5_arm_1" OrderNumber="5" Mandatory="No"/>
+	</Protocol>
+	<StudyEventDef OID="Event.event_1_arm_1" Name="Event 1" Type="Common" Repeating="No" redcap:EventName="Event 1" redcap:CustomEventLabel="" redcap:UniqueEventName="event_1_arm_1" redcap:ArmNum="1" redcap:ArmName="Arm 1" redcap:DayOffset="1" redcap:OffsetMin="0" redcap:OffsetMax="0">
+		<FormRef FormOID="Form.my_first_instrument" OrderNumber="1" Mandatory="No" redcap:FormName="my_first_instrument"/>
+	</StudyEventDef>
+	<StudyEventDef OID="Event.event_2_arm_1" Name="Event 2" Type="Common" Repeating="No" redcap:EventName="Event 2" redcap:CustomEventLabel="" redcap:UniqueEventName="event_2_arm_1" redcap:ArmNum="1" redcap:ArmName="Arm 1" redcap:DayOffset="2" redcap:OffsetMin="0" redcap:OffsetMax="0">
+		<FormRef FormOID="Form.my_first_instrument" OrderNumber="1" Mandatory="No" redcap:FormName="my_first_instrument"/>
+	</StudyEventDef>
+	<StudyEventDef OID="Event.event_3_arm_1" Name="Event 3" Type="Common" Repeating="No" redcap:EventName="Event 3" redcap:CustomEventLabel="" redcap:UniqueEventName="event_3_arm_1" redcap:ArmNum="1" redcap:ArmName="Arm 1" redcap:DayOffset="3" redcap:OffsetMin="0" redcap:OffsetMax="0">
+		<FormRef FormOID="Form.my_first_instrument" OrderNumber="1" Mandatory="No" redcap:FormName="my_first_instrument"/>
+	</StudyEventDef>
+	<StudyEventDef OID="Event.event_4_arm_1" Name="Event 4" Type="Common" Repeating="No" redcap:EventName="Event 4" redcap:CustomEventLabel="" redcap:UniqueEventName="event_4_arm_1" redcap:ArmNum="1" redcap:ArmName="Arm 1" redcap:DayOffset="4" redcap:OffsetMin="0" redcap:OffsetMax="0">
+		<FormRef FormOID="Form.my_first_instrument" OrderNumber="1" Mandatory="No" redcap:FormName="my_first_instrument"/>
+	</StudyEventDef>
+	<StudyEventDef OID="Event.event_5_arm_1" Name="Event 5" Type="Common" Repeating="No" redcap:EventName="Event 5" redcap:CustomEventLabel="" redcap:UniqueEventName="event_5_arm_1" redcap:ArmNum="1" redcap:ArmName="Arm 1" redcap:DayOffset="5" redcap:OffsetMin="0" redcap:OffsetMax="0">
+		<FormRef FormOID="Form.my_first_instrument" OrderNumber="1" Mandatory="No" redcap:FormName="my_first_instrument"/>
+	</StudyEventDef>
+	<FormDef OID="Form.my_first_instrument" Name="My First Instrument" Repeating="No" redcap:FormName="my_first_instrument">
+		<ItemGroupRef ItemGroupOID="my_first_instrument.record_id" Mandatory="No"/>
+		<ItemGroupRef ItemGroupOID="my_first_instrument.my_first_instrument_complete" Mandatory="No"/>
+	</FormDef>
+	<ItemGroupDef OID="my_first_instrument.record_id" Name="My First Instrument" Repeating="No">
+		<ItemRef ItemOID="record_id" Mandatory="No" redcap:Variable="record_id"/>
+		<ItemRef ItemOID="alert_1_description" Mandatory="No" redcap:Variable="alert_1_description"/>
+		<ItemRef ItemOID="send_alert_2" Mandatory="No" redcap:Variable="send_alert_2"/>
+		<ItemRef ItemOID="send_alert_3" Mandatory="No" redcap:Variable="send_alert_3"/>
+		<ItemRef ItemOID="send_alert_4" Mandatory="No" redcap:Variable="send_alert_4"/>
+		<ItemRef ItemOID="alert_log" Mandatory="No" redcap:Variable="alert_log"/>
+	</ItemGroupDef>
+	<ItemGroupDef OID="my_first_instrument.my_first_instrument_complete" Name="Form Status" Repeating="No">
+		<ItemRef ItemOID="my_first_instrument_complete" Mandatory="No" redcap:Variable="my_first_instrument_complete"/>
+	</ItemGroupDef>
+	<ItemDef OID="record_id" Name="record_id" DataType="text" Length="999" redcap:Variable="record_id" redcap:FieldType="text">
+		<Question><TranslatedText>Record ID</TranslatedText></Question>
+	</ItemDef>
+	<ItemDef OID="alert_1_description" Name="alert_1_description" DataType="text" Length="999" redcap:Variable="alert_1_description" redcap:FieldType="descriptive">
+		<Question><TranslatedText>Alert 1 will be sent the first time you save this form on each event. The other alerts will be sent only when you say &quot;yes&quot; to their respective fields.</TranslatedText></Question>
+	</ItemDef>
+	<ItemDef OID="send_alert_2" Name="send_alert_2" DataType="boolean" Length="1" redcap:Variable="send_alert_2" redcap:FieldType="yesno">
+		<Question><TranslatedText>Should redcap send Alert 2?</TranslatedText></Question>
+		<CodeListRef CodeListOID="send_alert_2.choices"/>
+	</ItemDef>
+	<ItemDef OID="send_alert_3" Name="send_alert_3" DataType="boolean" Length="1" redcap:Variable="send_alert_3" redcap:FieldType="yesno">
+		<Question><TranslatedText>Should redcap send Alert 3?</TranslatedText></Question>
+		<CodeListRef CodeListOID="send_alert_3.choices"/>
+	</ItemDef>
+	<ItemDef OID="send_alert_4" Name="send_alert_4" DataType="boolean" Length="1" redcap:Variable="send_alert_4" redcap:FieldType="yesno">
+		<Question><TranslatedText>Should redcap send Alert 4?</TranslatedText></Question>
+		<CodeListRef CodeListOID="send_alert_4.choices"/>
+	</ItemDef>
+	<ItemDef OID="alert_log" Name="alert_log" DataType="text" Length="999" redcap:Variable="alert_log" redcap:FieldType="textarea">
+		<Question><TranslatedText>Alert Log Look for the Alert log messages here. They should look like &#039;Alert 1 alert email sent: 2020-11-06 15:49:27&#039; Feel free to add your own comments here. The alerts logger should respect them and any other content in this field. The idea is that this could be a notes field where you can write whatever you need while the alert logging feature supplements those notes.</TranslatedText><redcap:FormattedTranslatedText>&lt;div class=&quot;rich-text-field-label&quot;&gt;&lt;p&gt;Alert Log&lt;/p&gt; &lt;p&gt;Look for the Alert log messages here. They should look like &#039;Alert 1 alert email sent: 2020-11-06 15:49:27&#039;&lt;/p&gt; &lt;p&gt;Feel free to add your own comments here. The alerts logger should respect them and any other content in this field. The idea is that this could be a notes field where you can write whatever you need while the alert logging feature supplements those notes.&lt;/p&gt;&lt;/div&gt;</redcap:FormattedTranslatedText></Question>
+	</ItemDef>
+	<ItemDef OID="my_first_instrument_complete" Name="my_first_instrument_complete" DataType="text" Length="1" redcap:Variable="my_first_instrument_complete" redcap:FieldType="select" redcap:SectionHeader="Form Status">
+		<Question><TranslatedText>Complete?</TranslatedText></Question>
+		<CodeListRef CodeListOID="my_first_instrument_complete.choices"/>
+	</ItemDef>
+	<CodeList OID="send_alert_2.choices" Name="send_alert_2" DataType="boolean" redcap:Variable="send_alert_2">
+		<CodeListItem CodedValue="1"><Decode><TranslatedText>Yes</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="0"><Decode><TranslatedText>No</TranslatedText></Decode></CodeListItem>
+	</CodeList>
+	<CodeList OID="send_alert_3.choices" Name="send_alert_3" DataType="boolean" redcap:Variable="send_alert_3">
+		<CodeListItem CodedValue="1"><Decode><TranslatedText>Yes</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="0"><Decode><TranslatedText>No</TranslatedText></Decode></CodeListItem>
+	</CodeList>
+	<CodeList OID="send_alert_4.choices" Name="send_alert_4" DataType="boolean" redcap:Variable="send_alert_4">
+		<CodeListItem CodedValue="1"><Decode><TranslatedText>Yes</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="0"><Decode><TranslatedText>No</TranslatedText></Decode></CodeListItem>
+	</CodeList>
+	<CodeList OID="my_first_instrument_complete.choices" Name="my_first_instrument_complete" DataType="text" redcap:Variable="my_first_instrument_complete">
+		<CodeListItem CodedValue="0"><Decode><TranslatedText>Incomplete</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="1"><Decode><TranslatedText>Unverified</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="2"><Decode><TranslatedText>Complete</TranslatedText></Decode></CodeListItem>
+	</CodeList>
+</MetaDataVersion>
+</Study>
+<ClinicalData StudyOID="Project.CopyemailalertlogtofieldTest1" MetaDataVersionOID="Metadata.CopyemailalertlogtofieldTest1_2020-11-06_1600">
+	<SubjectData SubjectKey="1" redcap:RecordIdField="record_id">
+		<StudyEventData StudyEventOID="Event.event_1_arm_1" StudyEventRepeatKey="1" redcap:UniqueEventName="event_1_arm_1">
+			<FormData FormOID="Form.my_first_instrument" FormRepeatKey="1">
+				<ItemGroupData ItemGroupOID="my_first_instrument.record_id" ItemGroupRepeatKey="1">
+					<ItemData ItemOID="record_id" Value="1"/>
+					<ItemData ItemOID="send_alert_2" Value="1"/>
+					<ItemData ItemOID="alert_log" Value="Alert 1 alert email sent: 2020-11-06 15:47:56
+Alert 2 alert email sent: 2020-11-06 15:48:46"/>
+				</ItemGroupData>
+				<ItemGroupData ItemGroupOID="my_first_instrument.my_first_instrument_complete" ItemGroupRepeatKey="1">
+					<ItemData ItemOID="my_first_instrument_complete" Value="0"/>
+				</ItemGroupData>
+			</FormData>
+		</StudyEventData>
+		<StudyEventData StudyEventOID="Event.event_2_arm_1" StudyEventRepeatKey="1" redcap:UniqueEventName="event_2_arm_1">
+			<FormData FormOID="Form.my_first_instrument" FormRepeatKey="1">
+				<ItemGroupData ItemGroupOID="my_first_instrument.record_id" ItemGroupRepeatKey="1">
+					<ItemData ItemOID="record_id" Value="1"/>
+					<ItemData ItemOID="send_alert_4" Value="1"/>
+					<ItemData ItemOID="alert_log" Value="Alert 1 alert email sent: 2020-11-06 15:49:27
+Alert 4 alert email sent: 2020-11-06 15:49:27"/>
+				</ItemGroupData>
+				<ItemGroupData ItemGroupOID="my_first_instrument.my_first_instrument_complete" ItemGroupRepeatKey="1">
+					<ItemData ItemOID="my_first_instrument_complete" Value="0"/>
+				</ItemGroupData>
+			</FormData>
+		</StudyEventData>
+		<StudyEventData StudyEventOID="Event.event_3_arm_1" StudyEventRepeatKey="1" redcap:UniqueEventName="event_3_arm_1">
+			<FormData FormOID="Form.my_first_instrument" FormRepeatKey="1">
+				<ItemGroupData ItemGroupOID="my_first_instrument.record_id" ItemGroupRepeatKey="1">
+					<ItemData ItemOID="record_id" Value="1"/>
+					<ItemData ItemOID="alert_log" Value="A comment
+Alert 1 alert email sent: 2020-11-06 15:50:41"/>
+				</ItemGroupData>
+				<ItemGroupData ItemGroupOID="my_first_instrument.my_first_instrument_complete" ItemGroupRepeatKey="1">
+					<ItemData ItemOID="my_first_instrument_complete" Value="0"/>
+				</ItemGroupData>
+			</FormData>
+		</StudyEventData>
+	</SubjectData>
+</ClinicalData>
+</ODM>
