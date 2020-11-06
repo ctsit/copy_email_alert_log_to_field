@@ -1,5 +1,8 @@
 # Copy Email Alert Log to Field
-A REDCap module to copy email alert log entries into a user-defined REDCap text field. All alerts tied to an event will appear in the corresponding field on that event.
+
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.4253415.svg)](https://doi.org/10.5281/zenodo.4253415)
+
+Copy Email Alert Log to Field is a REDCap module to copy email alert log entries into a user-defined REDCap text field. This exposes the name and date of alerts to anyone who can read the form where the configured text field is defined and makes the data available for easy export with the rest of the REDCap data.
 
 ![](img/comment_field.png)
 
