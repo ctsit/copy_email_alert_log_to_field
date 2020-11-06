@@ -1,0 +1,57 @@
+{
+    "name": "Copy Email Alert Log to Field",
+    "namespace": "CopyEmailAlert\\ExternalModule",
+    "description": "Copies email alert sent times into a field",
+    "permissions": [
+    ],
+    "framework-version": 3,
+    "authors": [
+        {
+            "name": "Kyle Chesney",
+            "email": "kyle.chesney@ufl.edu",
+            "institution": "University of Florida - CTSI"
+        },
+        {
+            "name": "Taryn Stoffs",
+            "email": "tls@ufl.edu",
+            "institution": "University of Florida - CTSI"
+        },
+        {
+            "name": "Philip Chase",
+            "email": "pbc@ufl.edu",
+            "institution": "University of Florida - CTSI"
+        }
+    ],
+    "compatibility": {
+        "redcap-version-min": "9.3.5"
+    },
+    "project-settings": [
+        {
+            "key": "alerts_comment_field",
+            "name": "Field to pipe alert log",
+            "autocomplete": true,
+            "type": "field-list",
+            "required": true
+        },
+        {
+            "key": "search_all_alerts",
+            "name": "Search all alerts on next run",
+            "type": "checkbox"
+        }
+    ],
+    "links": {
+        "control-center": [
+        ],
+        "project": [
+        ]
+    },
+    "crons": [
+        {
+            "cron_name": "pipe_email_alert_times_into_comments",
+            "cron_description": "Scrapes email alert notification times into a comments field",
+            "method": "addEmailAlertsToAllProjectComments",
+            "cron_frequency": "60",
+            "cron_max_run_time": "360"
+        }
+    ]
+}
