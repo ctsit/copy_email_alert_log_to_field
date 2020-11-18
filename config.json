@@ -1,7 +1,7 @@
 {
     "name": "Copy Email Alert Log to Field",
     "namespace": "CopyEmailAlert\\ExternalModule",
-    "description": "Copies email alert sent times into a field",
+    "description": "Copies email alert names and sent times into a field",
     "permissions": [
     ],
     "framework-version": 3,
