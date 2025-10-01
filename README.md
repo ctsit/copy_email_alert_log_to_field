@@ -1,4 +1,11 @@
-# Copy Email Alert Log to Field
+# Copy Email Alert Log to Field - ARCHIVED
+
+**This repository has been archived and is no longer actively maintained.**
+
+This project was archived as of October 1, 2025. The project for which it was written is now over. There's no funding to provide further maintenance for other projects. Please don't hesitate to use this code in accordance with the license; however, the authors are unable to offer any additional support.
+
+-----------
+
 A REDCap module to copy email alert log entries into a user-defined REDCap text field. All alerts tied to an event will appear in the corresponding field on that event.
 
 ![](img/comment_field.png)
